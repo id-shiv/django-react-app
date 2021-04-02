@@ -1,0 +1,8 @@
+# visual studio
+.vscode/
+
+# python
+/backend/venv/
+
+# react
+/frontend/node_modules/

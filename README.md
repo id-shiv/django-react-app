@@ -10,7 +10,6 @@
 
 - Install `Simple React Snippets` extension.
 - Install `Prettier` extension.
-- Install `Simple React Snippets` extension.
 
 ## Create a REACT frontend app
 
