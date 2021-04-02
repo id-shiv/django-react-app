@@ -18,6 +18,10 @@
 `rm -rf .git`  
 `npm start`
 
+### Install additional modules
+
+`npm i bootstrap`
+
 ## Create a Django backend app
 
 `mkdir backend`  
@@ -27,3 +31,4 @@
 `source venev/bin/activate`  
 `pip install django`  
 `pip install djangorestframework`
+`pip freeze > requirements.txt`
