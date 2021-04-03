@@ -6,7 +6,7 @@
 - Start and validate the REACT server.
 - Install create REACT app package: `sudo npm i -g create-react-app`.
 
-## Setup VS Code
+## Setup Visual Studio Code
 
 - Install `Simple React Snippets` extension.
 - Install `Prettier` extension.
@@ -21,6 +21,10 @@
 ### Install additional modules
 
 `npm i bootstrap`
+
+## Install Chrome extension for React debugging
+
+`React Developer Tools`
 
 ## Create a Django backend app
 

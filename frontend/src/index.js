@@ -5,16 +5,15 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
 import App from './App';
-import Sample from './components/Sample'
 
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   // first argument to render is the element
   <React.StrictMode>
-    <Sample />
     <App />
   </React.StrictMode>,
+
   // second argument to render is the document node
   document.getElementById('root')
 );
