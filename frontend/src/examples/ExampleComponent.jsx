@@ -7,6 +7,17 @@ import React, { Component } from "react";
 // };
 
 class Example extends Component {
+  // LIFECYCLE HOOKS - ONLY IN CLASS COMPONENTS
+  // While Mount: contrsuctor, render, componentDidMount
+  // While Update: render, componentDidMount
+  // While unmout: componentWillUnmout
+  // there are more ...
+  // constructor: called before the component is mounted, best place to intialize the state of the component
+  // render: called to mount
+  // componentDidMount: called after the component is mounted, best place to do AJAX or API calls and setState()
+  // componentDidUpdate: called after the component is updated, may be used to do AJAX or API calls to the server
+  // componentWillUnmount: called before the component is removed, may be used to do AJAX or API calls to the server
+
   // PROPERTIES
   state = {
     // SET THE STATE DYMANICALLY PASSED BY PARENT ELEMENT
@@ -31,20 +42,25 @@ class Example extends Component {
   // RENDER
   render() {
     // return a REACT \ Virtual DOM element (hence the import React above)
+
+    // OBJECT DESTRUCTURING
+    // Pick only the properties required and avoid typing this.props
+    const { children, example, handleDelete, handleIncrement } = this.props;
+
     return (
       // RETURN HTML ELEMENT
       // below is called jsx expression, are like JS objects
       <div>
         {/* RENDER CHILD PASSED FROM PARENT */}
-        {this.props.children}
+        {children}
 
         {/* PASS PROPERTIES TO HTML */}
         {/* <h1>Hello {this.processState()}</h1> */}
         {/* PASS CLASS VALUE TO HTML */}
         {/* note: class in HTML is className (class is a reserved keyword in JS) */}
         <span className="badge m-2 badge-success">
-          {this.props.example.value === 0 && "Zero"}
-          {this.props.example.value > 0 && this.props.example.value}
+          {example.value === 0 && "Zero"}
+          {example.value > 0 && example.value}
         </span>
 
         {/* HANDLE BUTTON CLICKS */}
@@ -59,14 +75,14 @@ class Example extends Component {
           // onClick={() => this.props.onDelete(this.props.example.id)}
           // PASS DATA TO EVENT HANDLER FUNCTIONS
           // or, use inline function call as below when needed to pass arguments
-          onClick={() => this.props.handleIncrement(this.props.example)}
+          onClick={() => handleIncrement(example)}
         >
           Increment
         </button>
 
         <button
           className="btn btn-danger btn-sm m-2"
-          onClick={() => this.props.handleDelete(this.props.example)}
+          onClick={() => handleDelete(example)}
         >
           Delete
         </button>
