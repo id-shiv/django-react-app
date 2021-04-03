@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 
+// In case where render function does not need any state to be saved by the class,
+// convert these class components to STATELESS FUNCTIONAL COMPONENT as below
+// const ExampleStateless = () => {
+//   return <h1>Hello</h1>;
+// };
+
 class Example extends Component {
   // PROPERTIES
   state = {
