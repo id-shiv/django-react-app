@@ -1,13 +1,12 @@
-import TopNavBar from './components/TopNavBar'
-import ExampleComponentList from './examples/ExampleComponentList'
+import './css/bootstrap.min.css'
+import './css/custom.css'
+
+import Layout from './components/Layout'
 
 function App() {
   return (
     <div>
-      <TopNavBar />
-      <main className="container">
-        <ExampleComponentList />
-      </main>
+      <Layout />
     </div>
   );
 }
