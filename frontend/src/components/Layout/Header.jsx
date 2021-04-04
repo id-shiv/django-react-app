@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
       duration: theme.transitions.duration.enteringScreen,
     }),
   },
+  appTitle: {},
   menuButton: {
     marginRight: 36,
   },
@@ -120,7 +121,7 @@ const Header = (props) => {
         >
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6" noWrap>
+        <Typography variant="h6" noWrap className={classes.appTitle}>
           React + Django
         </Typography>
 

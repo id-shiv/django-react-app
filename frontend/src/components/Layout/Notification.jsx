@@ -10,10 +10,15 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
+import NotificationsActiveRoundedIcon from "@material-ui/icons/NotificationsActiveRounded";
 
 const useStyles = makeStyles({
   list: {
     width: 250,
+  },
+  notificationIcon: {
+    padding: 10,
+    margin: 10,
   },
   //   fullList: {
   //     width: "auto",
@@ -57,7 +62,7 @@ export default function Notification() {
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
-      <h3 className="my-2 mx-5">Notificatons</h3>
+      <h3 className="my-2 ml-5">Notificatons</h3>
       <Divider />
       <List>
         {notificationList.map((notification) => (
@@ -71,7 +76,9 @@ export default function Notification() {
 
   return (
     <React.Fragment>
-      <Button onClick={toggleDrawer(true)}>Notifications</Button>
+      <Button onClick={toggleDrawer(true)} className={classes.notificationIcon}>
+        <NotificationsActiveRoundedIcon color="secondary" />
+      </Button>
       <Drawer anchor="right" open={state} onClose={toggleDrawer(false)}>
         {list("right")}
       </Drawer>
