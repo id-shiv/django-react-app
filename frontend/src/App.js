@@ -1,7 +1,7 @@
 import './css/bootstrap.min.css'
 import './css/custom.css'
 
-import Layout from './components/Layout'
+import Layout from './components/Layout/LayoutComponent'
 
 function App() {
   return (
