@@ -1,10 +1,7 @@
-import './css/bootstrap.min.css'
-import './css/custom.css'
-
 import { Grid, Typography, Paper } from "@material-ui/core"
 import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles"
 
-import Layout from './components/Layout/LayoutComponent'
+import Layout from '../components/Layout/LayoutComponent'
 
 function App() {
   // define theme
@@ -14,15 +11,15 @@ function App() {
     }
   })
 
-  // render
+  // render App
   return (
     <ThemeProvider theme={theme}>
       <Paper style={{ height: "100vh" }}>
         <Grid container direction="column">
-      <Layout />
-      </Grid>
+          <Layout />
+        </Grid>
       </Paper>
-      </ThemeProvider>
+    </ThemeProvider>
   );
 }
 
