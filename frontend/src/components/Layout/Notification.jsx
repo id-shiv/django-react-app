@@ -1,17 +1,10 @@
 import React from "react";
-import clsx from "clsx";
-import { makeStyles } from "@material-ui/core/styles";
-import Drawer from "@material-ui/core/Drawer";
-import Button from "@material-ui/core/Button";
-import List from "@material-ui/core/List";
-import Divider from "@material-ui/core/Divider";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
-import MailIcon from "@material-ui/icons/Mail";
-import NotificationsActiveRoundedIcon from "@material-ui/icons/NotificationsActiveRounded";
 
+import { makeStyles } from "@material-ui/core/styles";
+import { Drawer, Button, Divider, Typography } from "@material-ui/core";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+
+// styles
 const useStyles = makeStyles({
   list: {
     width: 250,
@@ -20,11 +13,9 @@ const useStyles = makeStyles({
     padding: 10,
     margin: 10,
   },
-  //   fullList: {
-  //     width: "auto",
-  //   },
 });
 
+// Notification lifecylcle
 export default function Notification() {
   const classes = useStyles();
   const [state, setState] = React.useState(false);
@@ -42,7 +33,8 @@ export default function Notification() {
     { key: 9, value: "notification 9" },
   ];
 
-  const toggleDrawer = (open) => (event) => {
+  // handle notification expand and collapse
+  const handleNotificationExpand = (open) => (event) => {
     if (
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
@@ -53,33 +45,37 @@ export default function Notification() {
     setState(open);
   };
 
-  const list = (anchor) => (
+  const list = () => (
     <div
-      className={clsx(classes.list, {
-        [classes.fullList]: anchor === "top" || anchor === "bottom",
-      })}
+      className={classes.list}
       role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
+      onClick={handleNotificationExpand(false)}
+      onKeyDown={handleNotificationExpand(false)}
     >
-      <h3 className="my-2 ml-5">Notificatons</h3>
+      <Typography variant="h5">Notificatons</Typography>
+
       <Divider />
-      <List>
-        {notificationList.map((notification) => (
-          <ListItem key={notification.key}>
-            <ListItemText>{notification.value}</ListItemText>
-          </ListItem>
-        ))}
-      </List>
+      {notificationList.map((notification) => (
+        <Typography variant="h6" key={notification.key}>
+          {notification.value}
+        </Typography>
+      ))}
     </div>
   );
 
   return (
     <React.Fragment>
-      <Button onClick={toggleDrawer(true)} className={classes.notificationIcon}>
-        <NotificationsActiveRoundedIcon color="secondary" />
+      <Button
+        onClick={handleNotificationExpand(true)}
+        className={classes.notificationIcon}
+      >
+        <NotificationsIcon />
       </Button>
-      <Drawer anchor="right" open={state} onClose={toggleDrawer(false)}>
+      <Drawer
+        anchor="right"
+        open={state}
+        onClose={handleNotificationExpand(false)}
+      >
         {list("right")}
       </Drawer>
     </React.Fragment>
