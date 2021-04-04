@@ -9,22 +9,43 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 
+import { makeStyles } from "@material-ui/core/styles";
+
 // Icons
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 
-const SideBar = (props) => {
+const drawerWidth = 300;
+
+// styles
+const useStyles = makeStyles((theme) => ({
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+  },
+  drawerPaper: {
+    width: drawerWidth,
+  },
+  // necessary for content to be below app bar
+  toolbar: theme.mixins.toolbar,
+}));
+
+// render back the component
+const SideBar = () => {
+  // get styles
+  const classes = useStyles();
+
   return (
     <Drawer
-      className={props.classes.drawer}
+      className={classes.drawer}
       variant="permanent"
       classes={{
-        paper: props.classes.drawerPaper,
+        paper: classes.drawerPaper,
       }}
       anchor="left"
     >
       {/* this is the rectangle box at top left */}
-      <div className={props.classes.toolbar}>ORION</div>
+      <div className={classes.toolbar}>ORION</div>
 
       <Divider />
       <List>
