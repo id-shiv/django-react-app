@@ -1,4 +1,5 @@
-import React from "react";
+import React, { lazy } from "react";
+import { Route } from "react-router-dom";
 
 // List and Divider
 import List from "@material-ui/core/List";
@@ -25,13 +26,23 @@ const SideBar = () => {
   // get styles
   const classes = useStyles();
 
+  // get required routes
+  const { Home, About } = lazy(() => import("../routes"));
+
   return (
     <div>
       <List>
         {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem button key={text} className={classes.listitem}>
             <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              {/* {index % 2 === 0 ? <InboxIcon /> : <MailIcon />} */}
+              {index % 2 === 0 ? (
+                <InboxIcon>
+                  <Route exact path="/home" component={Home} />
+                </InboxIcon>
+              ) : (
+                <Route exact path={About} />
+              )}
             </ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>

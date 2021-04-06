@@ -1,7 +1,14 @@
 import React from "react";
 
 import { makeStyles } from "@material-ui/core/styles";
-import { Drawer, Button, Divider, Typography } from "@material-ui/core";
+import {
+  Container,
+  Drawer,
+  Button,
+  Divider,
+  Typography,
+  Paper,
+} from "@material-ui/core";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 
 // styles
@@ -10,8 +17,25 @@ const useStyles = makeStyles({
     width: 250,
   },
   notificationIcon: {
-    padding: 10,
+    paddingLeft: 10,
     margin: 10,
+  },
+  notificationTitle: {
+    // paddingLeft: 30,
+    // justifyContent: "center",
+    marginTop: 15,
+    marginBottom: 15,
+    position: "sticky",
+    // borderLeft: 20,
+    // borderLeftColor: "#CCCCCC",
+  },
+  notificationItem: {
+    height: 50,
+    paddingTop: 5,
+    paddingLeft: 20,
+    marginTop: 5,
+    borderLeft: 5,
+    borderLeftColor: "#CCCCCC",
   },
 });
 
@@ -31,6 +55,11 @@ export default function Notification() {
     { key: 7, value: "notification 7" },
     { key: 8, value: "notification 8" },
     { key: 9, value: "notification 9" },
+    { key: 10, value: "notification 9" },
+    { key: 11, value: "notification 9" },
+    { key: 12, value: "notification 9" },
+    { key: 13, value: "notification 9" },
+    { key: 14, value: "notification 9" },
   ];
 
   // handle notification expand and collapse
@@ -52,13 +81,25 @@ export default function Notification() {
       onClick={handleNotificationExpand(false)}
       onKeyDown={handleNotificationExpand(false)}
     >
-      <Typography variant="h5">Notificatons</Typography>
-
+      <Container>
+        <Typography
+          variant="h6"
+          align="center"
+          className={classes.notificationTitle}
+        >
+          Notificatons
+        </Typography>
+        <Button>
+          <Typography variant="caption">CLEAR</Typography>
+        </Button>
+      </Container>
       <Divider />
       {notificationList.map((notification) => (
-        <Typography variant="h6" key={notification.key}>
-          {notification.value}
-        </Typography>
+        <Paper square className={classes.notificationItem} elevation={10}>
+          <Typography variant="caption" key={notification.key}>
+            {notification.value}
+          </Typography>
+        </Paper>
       ))}
     </div>
   );
