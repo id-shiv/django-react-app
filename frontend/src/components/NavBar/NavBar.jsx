@@ -1,40 +1,36 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 
 // import components
+import { Paper } from "@material-ui/core";
 import {
-  Container,
-  AppBar,
-  Toolbar,
-  Typography,
-  Button,
-} from "@material-ui/core";
+  NotificationsNone as NotificationIcon,
+  Settings as SettingsIcon,
+} from "@material-ui/icons";
 
-// create styles
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
-  title: {
-    flexGrow: 1,
-  },
-}));
-
-const NavBar = () => {
-  // import styles for render
-  const classes = useStyles();
-
+const NavBar = ({ classes }) => {
   return (
-    <Container className={classes.navBar}>
-      <AppBar position="fixed">
-        <Toolbar>
-          <Typography variant="h6" className={classes.title}>
-            Django + React
-          </Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar>
-    </Container>
+    <Paper elevation={0} square className={classes.navBarContainer}>
+      {/* left side container */}
+
+      <div className={classes.navBarSearch}></div>
+      {/* <input
+        className={classes.navBarSearch}
+        type="text"
+        placeholder="Search.."
+        autofocus
+      /> */}
+
+      {/* space in center, stratch to right */}
+      <div className={classes.navBarInBetween}></div>
+
+      {/* items in right */}
+      <a href="/" className={classes.navBarItemsRight}>
+        <NotificationIcon />
+      </a>
+      <a href="/" className={classes.navBarItemsRight}>
+        <SettingsIcon />
+      </a>
+    </Paper>
   );
 };
 

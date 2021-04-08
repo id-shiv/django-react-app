@@ -1,20 +1,13 @@
 import React from "react";
 
-// import components
-import { Grid, Paper } from "@material-ui/core";
-
 // import custom components
-import { SideBar, NavBar } from "../../components/";
+import { NavBar, SideBar } from "../../components";
 
-const Layout = () => {
+export default function Layout({ classes }) {
   return (
-    <Paper style={{ height: "100vh" }} square>
-      <Grid container direction="column">
-        <SideBar />
-        <NavBar />
-      </Grid>
-    </Paper>
+    <>
+      <SideBar classes={classes} />
+      <NavBar classes={classes} />
+    </>
   );
-};
-
-export default Layout;
+}
