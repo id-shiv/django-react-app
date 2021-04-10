@@ -24,9 +24,9 @@ function App() {
   // define theme
   const theme = createMuiTheme({
     palette: {
-      type: "dark"
-    }
-  })
+      type:"dark",
+    },
+  });
 
   // render App
   return (

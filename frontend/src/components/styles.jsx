@@ -13,23 +13,15 @@ export default makeStyles((theme) => ({
     height: "100%",
   },
 
-  main__container: {
-    display: "flex",
-    width: "100%",
-    height: "100%",
-  },
-
-  maincontent__container: {
-    display: "flex",
-    flexDirection: "column",
-  },
-
   // header
   header__container: {
     display: "flex",
     flexDirection: "row",
     position: "sticky",
     height: "50px",
+    borderBottom: "1px solid #373737",
+    boxShadow: "0px 1px 10px 1px #373737",
+    zIndex: 1,
   },
   header__itemsleft__container: {
     display: "flex",
@@ -41,54 +33,67 @@ export default makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
   },
-  header__itemsright: {
-    padding: "10px 15px",
-    marginLeft: "5px",
-    borderBottom: "2px solid dimgrey",
+  header__brand: {
+    padding: "10px 30px",
+    marginLeft: "50%",
+    marginRight: "5px",
+    borderBottom: "2px solid #212121",
     color: "inherit",
     "&:hover": {
-      color: "dimgrey",
+      backgroundColor: "#212121",
       borderBottom: "2px solid white",
     },
   },
-  header__brand: {
+  header__itemsright: {
     padding: "10px 15px",
-    borderBottom: "2px solid dimgrey",
+    marginLeft: "5px",
+    borderBottom: "2px solid #212121",
     color: "inherit",
     "&:hover": {
-      color: "dimgrey",
-      borderBottom: "2px solid white",
+      backgroundColor: "#212121",
+      borderBottomColor: "inherit",
     },
+  },
+
+  // main container = sidebar + main content
+  main__container: {
+    display: "flex",
+    width: "100%",
+    height: "100%",
   },
 
   // sidebar
   sidebar__container: {
+    paddingTop: "10px",
     display: "flex",
     flexDirection: "column",
-    width: "250px",
+    width: "20%",
+    boxShadow: "0.5px 0px 2px 0px #373737",
   },
   sidebar__button: {
-    padding: "5px",
-    margin: "5px 0px",
+    padding: "10px 7px",
+    paddingLeft: "20px",
+    marginBottom: "5px",
     display: "flex",
     textDecoration: "none",
-    borderRight: "solid 2px dimgrey",
+    // borderRight: "2px solid #212121",
     color: "inherit",
     "&:hover": {
-      backgroundColor: "dimgrey",
-      borderRightColor: "inherit",
+      backgroundColor: "#212121",
+      // borderRightColor: "white",
     },
   },
   sidebar__subbutton: {
-    padding: "5px",
-    margin: "3px 0px 5px 30px",
+    padding: "7px 5px",
+    paddingLeft: "50px",
+    marginBottom: "5px",
     display: "flex",
     textDecoration: "none",
-    borderRight: "solid 2px dimgrey",
+    // borderRight: "2px solid #212121",
     color: "inherit",
     "&:hover": {
-      backgroundColor: "dimgrey",
-      borderRightColor: "inherit",
+      backgroundColor: "#212121",
+      // borderRightColor: "inherit",
     },
   },
   sidebar__button__icon: {
@@ -104,49 +109,11 @@ export default makeStyles((theme) => ({
     top: "50%",
   },
 
-  // about
-  aboutContainer: {
-    display: "flex",
-    flex: 1,
+  // content
+  maincontent__container: {
+    padding: "10px",
     width: "100%",
-    height: "400px",
-    outline: "none",
-    alignItems: "center",
-    background: "rgba(119, 119, 119, 0.6)",
-    animation: "modalSlide 0.5s ease-out forwards",
-  },
-  aboutVersionContainer: {
     display: "flex",
     flexDirection: "column",
-    margin: "40px",
-  },
-  aboutComponentContainer: {
-    display: "flex",
-    flex: 1,
-    margin: "40px",
-  },
-  aboutComponentImageContainer: {
-    padding: "20px",
-    margin: "0px 30px",
-    borderBottom: "solid 2px white",
-  },
-  aboutComponentImage: {
-    width: "100px",
-    height: "80",
-    resizeMode: "contain",
-  },
-  aboutCloseButtonContainer: {
-    width: "100px",
-    height: "80px",
-  },
-  aboutCloseButton: {
-    display: "block",
-    margin: "auto",
-  },
-
-  // main container
-  mainContainer: {
-    marginLeft: "250px",
-    marginTop: "50px",
   },
 }));
