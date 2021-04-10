@@ -1,6 +1,5 @@
 import React from "react";
 
-import { Paper } from "@material-ui/core";
 import {
   Assignment as AssignmentIcon,
   VerifiedUser as VerifiedUserIcon,
@@ -75,30 +74,27 @@ export default function SideBar({ classes }) {
   ];
 
   return (
-    <Paper elevation={24} square className={classes.sideBarContainer}>
-      <h3 className={classes.sideBarTopBrand}>Django + React</h3>
-      <div className={classes.sideBarButtonGroup}>
-        {buttonProperties.map((button) => {
-          return (
-            <div key={button.buttonID}>
-              <SideBarButton
-                key={button.buttonID}
-                classes={classes}
-                buttonProperty={button}
-              />
-              {button.dropDownList.map((dropDownButton) => {
-                return (
-                  <SideBarSubButton
-                    key={dropDownButton.buttonID}
-                    classes={classes}
-                    buttonProperty={dropDownButton}
-                  />
-                );
-              })}
-            </div>
-          );
-        })}
-      </div>
-    </Paper>
+    <>
+      {buttonProperties.map((button) => {
+        return (
+          <div key={button.buttonID}>
+            <SideBarButton
+              key={button.buttonID}
+              classes={classes}
+              buttonProperty={button}
+            />
+            {button.dropDownList.map((dropDownButton) => {
+              return (
+                <SideBarSubButton
+                  key={dropDownButton.buttonID}
+                  classes={classes}
+                  buttonProperty={dropDownButton}
+                />
+              );
+            })}
+          </div>
+        );
+      })}
+    </>
   );
 }

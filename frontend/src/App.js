@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // import styles
 import "./assets/css/custom.css"
@@ -15,7 +15,7 @@ import Slide from '@material-ui/core/Slide';
 import { SnackbarProvider } from 'notistack';
 
 // import custom components
-import { Layout } from "./components/"
+import { BodyTemplate } from "./components"
 
 function App() {
   // import styles for render
@@ -33,7 +33,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <Suspense fallback={<div>Loading...</div>}>
-          <Switch>
               <SnackbarProvider 
                 maxSnack={3} 
                 anchorOrigin={{
@@ -43,13 +42,12 @@ function App() {
               }
             TransitionComponent={Slide}>
                 {/* paper component can import the theme */}
-                <Paper style={{ height: "100vh" }} square>
+                <Paper style={{ height: "100vh" }} elevation={0} square>
                   {/* add common rules (such as box sizing with below component) */}
                   <CssBaseline />
-                  <Layout classes={classes} />
+                  <BodyTemplate classes={classes} />
                 </Paper>
               </SnackbarProvider>
-          </Switch>
         </Suspense>
       </Router>
     </ThemeProvider>
