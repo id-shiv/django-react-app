@@ -4,6 +4,7 @@ import {
   NotificationsNone as NotificationIcon,
   Settings as SettingsIcon,
   Info as InfoIcon,
+  Feedback as FeedbackIcon,
 } from "@material-ui/icons";
 
 const Header = ({ classes }) => {
@@ -21,6 +22,9 @@ const Header = ({ classes }) => {
         </a>
         <a href="/" className={classes.header__itemsright}>
           <InfoIcon />
+        </a>
+        <a href="/" className={classes.header__itemsright}>
+          <FeedbackIcon />
         </a>
         <a href="/" className={classes.header__itemsright}>
           <SettingsIcon />
