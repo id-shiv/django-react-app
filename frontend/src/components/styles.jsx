@@ -40,8 +40,9 @@ export default makeStyles((theme) => ({
     borderBottom: "2px solid #212121",
     color: "inherit",
     "&:hover": {
-      backgroundColor: "#212121",
-      borderBottom: "2px solid white",
+      color: "#212121",
+      backgroundColor: "#bbdefb",
+      borderBottomColor: "#212121",
     },
   },
   header__itemsright: {
@@ -50,8 +51,9 @@ export default makeStyles((theme) => ({
     borderBottom: "2px solid #212121",
     color: "inherit",
     "&:hover": {
-      backgroundColor: "#212121",
-      borderBottomColor: "inherit",
+      color: "#212121",
+      backgroundColor: "#bbdefb",
+      borderBottomColor: "#212121",
     },
   },
 
@@ -76,11 +78,11 @@ export default makeStyles((theme) => ({
     marginBottom: "5px",
     display: "flex",
     textDecoration: "none",
-    // borderRight: "2px solid #212121",
     color: "inherit",
     "&:hover": {
-      backgroundColor: "#212121",
-      // borderRightColor: "white",
+      color: "#212121",
+      backgroundColor: "#bbdefb",
+      borderBottomColor: "#212121",
     },
   },
   sidebar__subbutton: {
@@ -89,11 +91,11 @@ export default makeStyles((theme) => ({
     marginBottom: "5px",
     display: "flex",
     textDecoration: "none",
-    // borderRight: "2px solid #212121",
     color: "inherit",
     "&:hover": {
-      backgroundColor: "#212121",
-      // borderRightColor: "inherit",
+      color: "#212121",
+      backgroundColor: "#bbdefb",
+      borderBottomColor: "#212121",
     },
   },
   sidebar__button__icon: {
