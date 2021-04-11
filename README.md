@@ -35,4 +35,5 @@
 `source venev/bin/activate`  
 `pip install django`  
 `pip install djangorestframework`
-`pip freeze > requirements.txt`
+`pip freeze > requirements.txt`  
+`django-admin startproject api`

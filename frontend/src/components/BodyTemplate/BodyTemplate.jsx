@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "../Home/Home";
 import About from "../About/About";
+import Feedback from "../Feedback/Feedback";
 
 // import custom components
 import { Header, SideBar, RightBar } from "./";
@@ -26,6 +27,9 @@ export default function BodyTemplate({ classes }) {
               </Route>
               <Route path="/about">
                 <About classes={classes} />
+              </Route>
+              <Route path="/feedback">
+                <Feedback classes={classes} />
               </Route>
             </Switch>
           </Router>

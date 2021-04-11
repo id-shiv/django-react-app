@@ -4,6 +4,7 @@ export default makeStyles((theme) => ({
   root: {
     display: "flex",
     margin: 0,
+    color: "#373737",
   },
 
   body__container: {
@@ -123,7 +124,7 @@ export default makeStyles((theme) => ({
     overflow: "hidden",
   },
   main__content__title: {
-    padding: "10px 10px 20px 10px",
+    padding: "5px",
     borderBottom: "1px solid #373737",
   },
   main__content__body: {
@@ -134,14 +135,15 @@ export default makeStyles((theme) => ({
   about__container: {
     display: "flex",
     flexDirection: "column",
-    textAlign: "center",
   },
-  about__version_container: {
+  about__details__container: {
     display: "flex",
     flexDirection: "column",
-    padding: "50px 0px",
-    marginLeft: "auto",
-    marginRight: "auto",
+    paddingBottom: "5px",
+    borderBottom: "1px solid #373737",
+  },
+  about__details: {
+    padding: "5px 0px",
   },
   about__component__container: {
     display: "flex",
@@ -157,5 +159,19 @@ export default makeStyles((theme) => ({
   about__plus: {
     marginTop: "auto",
     marginBottom: "auto",
+  },
+
+  // feedback
+  feedback__form__container: {
+    marginTop: "30px",
+  },
+  feedback__form__textarea: {
+    width: "100%",
+  },
+  feedback__form__element: {
+    paddingBottom: "10px",
+    width: "70%",
+    marginLeft: "auto",
+    marginRight: "auto",
   },
 }));

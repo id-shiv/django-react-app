@@ -25,6 +25,17 @@ function App() {
   const theme = createMuiTheme({
     palette: {
       type:"dark",
+      primary: {
+        main: "#bbdefb",
+        dark: "#373737",
+        color: "#ffffff",
+        contrastText: "#000000",
+      },
+    },
+    props: {
+      MuiFormControl: {
+        fullWidth: true,
+      },
     },
   });
 

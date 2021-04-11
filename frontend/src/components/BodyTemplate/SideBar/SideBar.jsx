@@ -6,7 +6,7 @@ import {
   Assistant as AssistantIcon,
   BugReport as BugReportIcon,
   FindInPage as FindInPageIcon,
-  Description as DescriptionIcon,
+  Pageview as PageViewIcon,
   Code as CodeIcon,
 } from "@material-ui/icons/";
 import SideBarButton from "./SideBarButton";
@@ -47,7 +47,7 @@ export default function SideBar({ classes }) {
         {
           buttonID: 32,
           buttonText: "Scan Code",
-          buttonIcon: <DescriptionIcon />,
+          buttonIcon: <PageViewIcon />,
           buttonType: "Plain",
           dropDownList: [],
           buttonRoute: "/",
