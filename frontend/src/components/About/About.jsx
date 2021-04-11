@@ -57,8 +57,8 @@ const About = ({ classes }) => {
 
   return (
     <>
-      <ContentTitle classes={classes} title="About" />
-      <ContentBody classes={classes} body={body} />
+      <ContentTitle classes={classes} child={"About"} />
+      <ContentBody classes={classes} child={body} />
     </>
   );
 };

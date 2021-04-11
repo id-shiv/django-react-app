@@ -24,10 +24,11 @@ export default makeStyles((theme) => ({
     zIndex: 1,
   },
   header__brand: {
-    padding: "10px",
+    padding: "12px 20px",
     marginLeft: "auto",
     marginRight: "auto",
     textAlign: "center",
+    textDecoration: "none",
     borderBottom: "2px solid #212121",
     color: "inherit",
     "&:hover": {

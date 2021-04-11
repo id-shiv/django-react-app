@@ -8,12 +8,21 @@ import {
   FindInPage as FindInPageIcon,
   Pageview as PageViewIcon,
   Code as CodeIcon,
+  Dashboard as DashboardIcon,
 } from "@material-ui/icons/";
 import SideBarButton from "./SideBarButton";
 import SideBarSubButton from "./SideBarSubButton";
 
 export default function SideBar({ classes }) {
   const buttonProperties = [
+    {
+      buttonID: 0,
+      buttonText: "Home",
+      buttonIcon: <DashboardIcon />,
+      buttonType: "Plain",
+      dropDownList: [],
+      buttonRoute: "/",
+    },
     {
       buttonID: 1,
       buttonText: "OBSM",

@@ -44,7 +44,9 @@ function App() {
     <ThemeProvider theme={theme}>
       <Router>
         <Suspense fallback={<div>Loading...</div>}>
-              <SnackbarProvider xs
+              <SnackbarProvider
+                xs="true"
+                hideIconVariant={false}
                 maxSnack={3} 
                 anchorOrigin={{
                   vertical: 'top',

@@ -1,36 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
+import { useSnackbar } from "notistack";
 
-import { Button, TextareaAutosize, FormControl } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 
 import { ContentTitle, ContentBody } from "../BodyTemplate";
 
 const Feedback = ({ classes }) => {
-  const feedbackBody = (
+  const { enqueueSnackbar } = useSnackbar();
+
+  const [feedback, setFeedback] = useState("");
+
+  const handleSubmitFeedbackClick = (e) => {
+    e.preventDefault();
+    console.log({ feedback });
+    enqueueSnackbar("Feedback submitted successfully", {
+      variant: "success",
+      preventDuplicate: true,
+    });
+  };
+
+  const body = (
     <>
       <div className={classes.feedback__form__container}>
-        <FormControl>
+        <form onSubmit={handleSubmitFeedbackClick}>
           <div className={classes.feedback__form__element}>
-            <TextareaAutosize
+            <textarea
               aria-label="feedback"
-              rowsMin={8}
+              rows="8"
               placeholder="Enter your feedback \ query here ..."
               className={classes.feedback__form__textarea}
+              value={feedback}
+              onChange={(e) => setFeedback(e.target.value)}
             />
           </div>
 
           <div className={classes.feedback__form__element}>
-            <Button color="primary" variant="contained">
+            <Button type="submit" color="primary" variant="contained">
               Submit
             </Button>
           </div>
-        </FormControl>
+        </form>
       </div>
     </>
   );
+
   return (
     <>
       <ContentTitle classes={classes} child={"Feedback  Queries"} />
-      <ContentBody classes={classes} child={feedbackBody} />
+      <ContentBody classes={classes} child={body} />
     </>
   );
 };
