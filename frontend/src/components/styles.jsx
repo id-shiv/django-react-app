@@ -16,38 +16,17 @@ export default makeStyles((theme) => ({
   // header
   header__container: {
     display: "flex",
-    flexDirection: "row",
     position: "sticky",
     height: "50px",
     borderBottom: "1px solid #373737",
     boxShadow: "0px 1px 10px 1px #373737",
     zIndex: 1,
   },
-  header__itemsleft__container: {
-    display: "flex",
-    width: "250px",
-    flex: 1,
-    alignItems: "center",
-  },
-  header__itemsright__container: {
-    display: "flex",
-    alignItems: "center",
-  },
   header__brand: {
-    padding: "10px 30px",
-    marginLeft: "50%",
-    marginRight: "5px",
-    borderBottom: "2px solid #212121",
-    color: "inherit",
-    "&:hover": {
-      color: "#212121",
-      backgroundColor: "#bbdefb",
-      borderBottomColor: "#212121",
-    },
-  },
-  header__itemsright: {
-    padding: "10px 15px",
-    marginLeft: "5px",
+    padding: "10px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    textAlign: "center",
     borderBottom: "2px solid #212121",
     color: "inherit",
     "&:hover": {
@@ -57,7 +36,7 @@ export default makeStyles((theme) => ({
     },
   },
 
-  // main container = sidebar + main content
+  // main container = sidebar + main content + rightbar
   main__container: {
     display: "flex",
     width: "100%",
@@ -69,7 +48,7 @@ export default makeStyles((theme) => ({
     paddingTop: "10px",
     display: "flex",
     flexDirection: "column",
-    width: "20%",
+    width: "280px",
     boxShadow: "0.5px 0px 2px 0px #373737",
   },
   sidebar__button: {
@@ -79,6 +58,7 @@ export default makeStyles((theme) => ({
     display: "flex",
     textDecoration: "none",
     color: "inherit",
+    borderRight: "2px solid #373737",
     "&:hover": {
       color: "#212121",
       backgroundColor: "#bbdefb",
@@ -92,6 +72,7 @@ export default makeStyles((theme) => ({
     display: "flex",
     textDecoration: "none",
     color: "inherit",
+    borderRight: "2px solid #373737",
     "&:hover": {
       color: "#212121",
       backgroundColor: "#bbdefb",
@@ -111,11 +92,63 @@ export default makeStyles((theme) => ({
     top: "50%",
   },
 
+  // right bar
+  rightbar__container: {
+    paddingTop: "10px",
+    display: "flex",
+    flexDirection: "column",
+    width: "50px",
+    boxShadow: "0px -0.5px 2px 0px #373737",
+  },
+  rightbar__icon: {
+    padding: "10px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginBottom: "3px",
+    borderLeft: "2px solid #373737",
+    color: "inherit",
+    justifyContent: "center",
+    "&:hover": {
+      color: "#212121",
+      backgroundColor: "#bbdefb",
+    },
+  },
+
   // content
   maincontent__container: {
     padding: "10px",
     width: "100%",
     display: "flex",
     flexDirection: "column",
+    overflow: "hidden",
+  },
+
+  // about
+  about__container: {
+    display: "flex",
+    flexDirection: "column",
+    textAlign: "center",
+  },
+  about__version_container: {
+    display: "flex",
+    flexDirection: "column",
+    padding: "50px 0px",
+    marginLeft: "auto",
+    marginRight: "auto",
+  },
+  about__component__container: {
+    display: "flex",
+    marginLeft: "auto",
+    marginRight: "auto",
+  },
+  about__component: {
+    padding: "10px",
+    width: "150px",
+    height: "150px",
+    objectFit: "contain",
+  },
+  about__plus: {
+    marginTop: "auto",
+    marginBottom: "auto",
   },
 }));

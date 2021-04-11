@@ -1,21 +1,38 @@
 import React from "react";
-// import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Home from "../Home/Home";
+import About from "../About/About";
 
 // import custom components
-import { Header, SideBar } from "./";
+import { Header, SideBar, RightBar } from "./";
 
 export default function BodyTemplate({ classes }) {
   return (
     <>
-      <div className={classes.body__container}>
-        <div className={classes.header__container}>
-          <Header classes={classes} />
+      <div className={classes.header__container}>
+        <Header classes={classes} />
+      </div>
+      <div className={classes.main__container}>
+        <div className={classes.sidebar__container}>
+          <SideBar classes={classes} />
         </div>
-        <div className={classes.main__container}>
-          <div className={classes.sidebar__container}>
-            <SideBar classes={classes} />
-          </div>
-          <div className={classes.maincontent__container}>Main Content</div>
+
+        <div id="main__content" className={classes.maincontent__container}>
+          <Router>
+            <Switch>
+              <Route exact path="/">
+                <Home classes={classes} />
+              </Route>
+              <Route path="/about">
+                <About classes={classes} />
+              </Route>
+            </Switch>
+          </Router>
+        </div>
+
+        <div className={classes.rightbar__container}>
+          <RightBar classes={classes} />
         </div>
       </div>
     </>

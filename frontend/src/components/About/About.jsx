@@ -1,63 +1,61 @@
 import React from "react";
 
-import { Modal } from "@material-ui/core";
+import { Add as AddIcon } from "@material-ui/icons";
+
 import ReactImage from "../../assets/media/about/react.png";
 import PythonDjangoImage from "../../assets/media/about/django.png";
 import MUIImage from "../../assets/media/about/mui.svg";
-import CancelPresentationIcon from "@material-ui/icons/CancelPresentation";
+import JSImage from "../../assets/media/about/js.png";
+import HTML5Image from "../../assets/media/about/html5.png";
+import CSSImage from "../../assets/media/about/css.png";
 
 const About = ({ classes }) => {
-  const [modalShown, toggleModal] = React.useState(true);
-
+  console.log("About Page");
   return (
-    <Modal
-      shown={modalShown}
-      close={() => {
-        toggleModal(false);
-      }}
-      aria-labelledby="simple-modal-title"
-      aria-describedby="simple-modal-description"
-      outline="none"
-      className={classes.aboutContainer}
-    >
-      <div className={classes.aboutContainer}>
-        <div className={classes.aboutVersionContainer}>
-          <h3>Version: 0.0.1</h3>
+    <>
+      <div className={classes.about__container}>
+        <div className={classes.about__version_container}>
+          <p>
+            PROJECT OR is an attempt to assist teams with scripts, analysis and
+            intelligence as a service with no dependencies.
+          </p>
+          <h2>Version: 0.0.1</h2>
           <p>Copyright | All Rights Reserved</p>
         </div>
-        <div className={classes.aboutComponentContainer}>
-          <div className={classes.aboutComponentImageContainer}>
-            <img
-              src={ReactImage}
-              alt="REACT"
-              className={classes.aboutComponentImage}
-            />
-          </div>
-          <div className={classes.aboutComponentImageContainer}>
-            <img
-              src={PythonDjangoImage}
-              alt="Python DJANGO"
-              className={classes.aboutComponentImage}
-            />
-          </div>
-          <div className={classes.aboutComponentImageContainer}>
-            <img
-              src={MUIImage}
-              alt="Material UI"
-              className={classes.aboutComponentImage}
-            />
-          </div>
+
+        <div className={classes.about__component__container}>
+          <img
+            src={ReactImage}
+            alt="REACT"
+            className={classes.about__component}
+          />
+          <AddIcon className={classes.about__plus} />
+          <img src={JSImage} alt="JS" className={classes.about__component} />
+          <AddIcon className={classes.about__plus} />
+          <img
+            src={MUIImage}
+            alt="Material UI"
+            className={classes.about__component}
+          />
+          <AddIcon className={classes.about__plus} />
+          <img
+            src={PythonDjangoImage}
+            alt="Python DJANGO"
+            className={classes.about__component}
+          />
         </div>
-        <button
-          onClick={() => {
-            toggleModal(!modalShown);
-          }}
-          className={classes.aboutCloseButtonContainer}
-        >
-          <CancelPresentationIcon className={classes.aboutCloseButton} />
-        </button>
+
+        <div className={classes.about__component__container}>
+          <img
+            src={HTML5Image}
+            alt="HTML"
+            className={classes.about__component}
+          />
+          <AddIcon className={classes.about__plus} />
+          <img src={CSSImage} alt="CSS" className={classes.about__component} />
+        </div>
       </div>
-    </Modal>
+    </>
   );
 };
 
