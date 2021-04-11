@@ -122,6 +122,13 @@ export default makeStyles((theme) => ({
     flexDirection: "column",
     overflow: "hidden",
   },
+  main__content__title: {
+    padding: "10px 10px 20px 10px",
+    borderBottom: "1px solid #373737",
+  },
+  main__content__body: {
+    padding: "10px",
+  },
 
   // about
   about__container: {

@@ -5,11 +5,15 @@ import {
   Settings as SettingsIcon,
   Info as InfoIcon,
   Feedback as FeedbackIcon,
+  AccountCircle as AccountCircleIcon,
 } from "@material-ui/icons";
 
 export default function RightBar({ classes }) {
   return (
     <>
+      <a href="/" className={classes.rightbar__icon}>
+        <AccountCircleIcon />
+      </a>
       <a href="/" className={classes.rightbar__icon}>
         <NotificationIcon />
       </a>
