@@ -175,4 +175,14 @@ export default makeStyles((theme) => ({
     marginLeft: "auto",
     marginRight: "auto",
   },
+
+  // notifications
+  notifications__container: {
+    width: "100%",
+  },
+
+  // table
+  table__container: {
+    maxHeight: 480,
+  },
 }));

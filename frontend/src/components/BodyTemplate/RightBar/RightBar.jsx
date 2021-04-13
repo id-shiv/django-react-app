@@ -15,7 +15,7 @@ export default function RightBar({ classes }) {
       <a href="/" className={classes.rightbar__icon}>
         <AccountCircleIcon />
       </a>
-      <a href="/" className={classes.rightbar__icon}>
+      <a href="/notifications" className={classes.rightbar__icon}>
         <NotificationIcon />
       </a>
       <a href="/about" className={classes.rightbar__icon}>

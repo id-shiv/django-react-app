@@ -3,6 +3,8 @@
 
 # python
 /backend/venv/
+__pycache__/
+*.pyc
 
 # react
 /frontend/node_modules/
