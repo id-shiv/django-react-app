@@ -5,10 +5,10 @@ import App from './App';
 
 ReactDOM.render(
   // first argument to render is the element
-  <React.StrictMode>
+  // <React.StrictMode>
     <App />
-  </React.StrictMode>,
-
+  // </React.StrictMode>,
+  ,
   // second argument to render is the document node
   document.getElementById('root')
 );
