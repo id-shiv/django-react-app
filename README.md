@@ -36,4 +36,7 @@
 `pip install django`  
 `pip install djangorestframework`
 `pip freeze > requirements.txt`  
-`django-admin startproject api`
+`django-admin startproject api`  
+`rename api src`  
+`cd src`  
+`python manage.py startapp applications`
