@@ -185,4 +185,10 @@ export default makeStyles((theme) => ({
   table__container: {
     maxHeight: 480,
   },
+
+  // under construction image
+  under__construction: {
+    width: "50%",
+    height: 520,
+  },
 }));
