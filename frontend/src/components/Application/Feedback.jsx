@@ -47,7 +47,7 @@ const Feedback = ({ classes }) => {
 
   return (
     <>
-      <ContentTitle classes={classes} child={"Feedback  Queries"} />
+      <ContentTitle classes={classes} child={"Feedback \\ Queries"} />
       <ContentBody classes={classes} child={body} />
     </>
   );
