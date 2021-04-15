@@ -15,7 +15,7 @@ import Slide from '@material-ui/core/Slide';
 import { SnackbarProvider } from 'notistack';
 
 // import custom components
-import { BodyTemplate } from "./components"
+import Layout from "./components/Components/Layout"
 
 function App() {
   // import styles for render
@@ -58,7 +58,7 @@ function App() {
                 <Paper style={{ height: "100vh" }} elevation={0} square>
                   {/* add common rules (such as box sizing with below component) */}
                   <CssBaseline />
-                  <BodyTemplate classes={classes} />
+                  <Layout classes={classes} />
                 </Paper>
               </SnackbarProvider>
         </Suspense>

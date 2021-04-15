@@ -1,7 +1,8 @@
 import React from "react";
 
-import { ContentTitle, ContentBody } from "../BodyTemplate";
-import UnderConstruction from "../BodyTemplate/UnderConstruction";
+import ContentTitle from "../Components/ContentTitle";
+import ContentBody from "../Components/ContentBody";
+import UnderConstruction from "../Components/UnderConstruction";
 
 const Settings = ({ classes }) => {
   const body = <UnderConstruction classes={classes} />;

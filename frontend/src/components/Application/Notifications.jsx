@@ -9,7 +9,8 @@ import TableHead from "@material-ui/core/TableHead";
 import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 
-import { ContentTitle, ContentBody } from "../BodyTemplate";
+import ContentTitle from "../Components/ContentTitle";
+import ContentBody from "../Components/ContentBody";
 
 const Notifications = ({ classes }) => {
   // get and save notifications from backend

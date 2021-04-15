@@ -1,16 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Home from "../Home/Home";
-import About from "../About/About";
-import Feedback from "../Feedback/Feedback";
+// import application pages
+import Home from "../Application/Home";
+import About from "../Application/About";
+import Feedback from "../Application/Feedback";
 import Notifications from "../Application/Notifications";
 import Settings from "../Application/Settings";
 
 // import custom components
-import { Header, SideBar, RightBar } from "./";
+import Header from "./Header";
+import SideBar from "./SideBar";
+import RightBar from "./RightBar";
 
-export default function BodyTemplate({ classes }) {
+export default function Layout({ classes }) {
   return (
     <>
       <div className={classes.header__container}>

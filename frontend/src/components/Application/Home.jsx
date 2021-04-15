@@ -1,6 +1,7 @@
 import React from "react";
 
-import { ContentTitle, ContentBody } from "../BodyTemplate";
+import ContentTitle from "../Components/ContentTitle";
+import ContentBody from "../Components/ContentBody";
 
 const Home = ({ classes }) => {
   const body = <h5>Home Page Content</h5>;

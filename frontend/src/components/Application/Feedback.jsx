@@ -3,7 +3,8 @@ import { useSnackbar } from "notistack";
 
 import { Button } from "@material-ui/core";
 
-import { ContentTitle, ContentBody } from "../BodyTemplate";
+import ContentTitle from "../Components/ContentTitle";
+import ContentBody from "../Components/ContentBody";
 
 const Feedback = ({ classes }) => {
   const { enqueueSnackbar } = useSnackbar();

@@ -9,7 +9,8 @@ import JSImage from "../../assets/media/about/js.png";
 import HTML5Image from "../../assets/media/about/html5.png";
 import CSSImage from "../../assets/media/about/css.png";
 
-import { ContentTitle, ContentBody } from "../BodyTemplate";
+import ContentTitle from "../Components/ContentTitle";
+import ContentBody from "../Components/ContentBody";
 
 const About = ({ classes }) => {
   const body = (
